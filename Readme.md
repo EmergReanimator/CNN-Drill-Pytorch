@@ -1,5 +1,11 @@
 # Step-By-Step Guide to Design A Convolutional Neural Network, PyTorch
 
+## Installation
+
+`virtualenv --python=/usr/bin/python3.11 venv`
+`. ./venv/bin/activate`
+`pip install -r requirements.txt`
+
 <br>
 
 <div class="row">
@@ -95,7 +101,7 @@ Experiment Table
 Check out [here](https://paperswithcode.com/sota/image-classification-on-mnist), here the *MNIST State of the Art* results the top model *Branching/Merging CNN + Homogeneous Vector Capsules* was able to achive 99.87% accuracy with 1,514,187 Trainable Parameters and we are at  99.53% with just 7.4k parameters. NOTE: i didnt mean to compare nor stating that it is better just stating the importance of parameters while creting a network, it may be obvious that for more accuracy more parameters may be required.
 
 # Best Model Architecture
-  
+
 <p align="center">
     <img src="image/arch.png" alt="centered image" />
 </p>

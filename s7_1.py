@@ -73,11 +73,12 @@ evaluate_model(trainer.model, test_loader, device)
 
 # torch.save(trainer.model.state_dict(), './model.pt')
 
-model_fn = f'./models/{device}-model.pth'
+model_dir = './models'
 try:
-    os.mkdir(model_fn)
+    os.mkdir(model_dir)
 except FileExistsError:
     pass
 
+model_fn = f'{model_dir}/{device}-model.pth'
 torch.save(trainer.model, model_fn)
 

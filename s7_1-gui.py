@@ -10,7 +10,9 @@ import matplotlib.image as mpimg
 batch_size = 128
 mean = 0.1307
 std = 0.3081
-device = 'cpu'
+
+use_cuda = torch.cuda.is_available()
+device = torch.device("cuda" if use_cuda else "cpu")
 
 
 def predict_digit(image, model, transforms):
