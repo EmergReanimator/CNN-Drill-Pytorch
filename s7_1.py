@@ -22,17 +22,10 @@ input('Hit any key to continue')
 
 
 # Train data transformations
-train_transforms = transforms.Compose(
-    [
-        transforms.ToTensor(),
-        transforms.Normalize(mean=(mean,), std=(std,)),
-    ]
-)
+train_transforms = transforms.Compose([transforms.ToTensor(), transforms.Normalize(mean=(mean,), std=(std,)),])
 
 # Test data transformations
-test_transforms = transforms.Compose(
-    [transforms.ToTensor(), transforms.Normalize(mean=(mean,), std=(std,))]
-)
+test_transforms = transforms.Compose([transforms.ToTensor(), transforms.Normalize(mean=(mean,), std=(std,))])
 
 kwargs = {
     "batch_size": batch_size,
@@ -70,8 +63,6 @@ trainer.plot_history()
 
 
 evaluate_model(trainer.model, test_loader, device)
-
-# torch.save(trainer.model.state_dict(), './model.pt')
 
 model_dir = './models'
 try:
